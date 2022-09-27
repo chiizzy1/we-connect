@@ -17,5 +17,9 @@ router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 // Profile page
 router.get("/profile", ensureAuth, postsController.getProfile);
+// Feeds page
+router.get("/feed", ensureAuth, postsController.getFeed);
+
+
 
 module.exports = router
