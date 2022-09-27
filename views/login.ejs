@@ -1,0 +1,20 @@
+<%- include('partials/header') -%>
+
+<main class="container">
+    <div class="container">
+      <div class="content">
+        <div class="card">
+      <h2>Login</h2>
+    <form action="/login" method="POST">
+      <label for="Email">Email</label>
+        <input type="email" id="Email" name="email" placeholder="Email">
+      <label for="Password">Password</label>
+        <input type="password" id="Password" name="password" placeholder="Password">
+        <input type="submit" class="btn" class='space'>
+    </form>
+        </div>
+      </div>
+    </div>
+</main>
+
+<%- include('partials/footer') -%>
