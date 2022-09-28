@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "tailwindcss -i src/styles.css -o public/css/output.css --watch"
   },
   "author": "Chinwuba Israel",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.32.0",
     "connect-mongo": "^4.6.0",
+    "daisyui": "^2.31.0",
     "dotenv": "^16.0.2",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
@@ -30,6 +32,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "tailwindcss": "^3.1.8"
   }
 }

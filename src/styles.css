@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Roboto', sans-serif;
+    }
+  }
+
+/* .card{
+    background: darkgray;
+    color: #fff;
+} */
