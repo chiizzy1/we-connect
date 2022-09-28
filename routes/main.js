@@ -19,7 +19,7 @@ router.post("/signup", authController.postSignup);
 router.get("/profile", ensureAuth, postsController.getProfile);
 // Feeds page
 router.get("/feed", ensureAuth, postsController.getFeed);
-
-
+// Logout Page
+router.get("/logout", authController.logout);
 
 module.exports = router
