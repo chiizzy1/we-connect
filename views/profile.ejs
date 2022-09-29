@@ -12,11 +12,14 @@
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                   <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <input type="text" placeholder="Type here" id="title" name="title" class="input input-bordered input-md w-full max-w-xs" />
+                  <!-- <input type="text" placeholder="Type here"  class="input input-bordered input-accent w-full max-w-xs" /> -->
+                  <!-- <input type="text" class="form-control" > -->
               </div>
               <div class="mb-3">
                 <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
+                <input type="text" placeholder="Type here" id="caption" name="caption" class="input input-bordered input-lg w-full max-w-xs" />
+                <!-- <textarea class="form-control" id="caption" name="caption"></textarea> -->
               </div>
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
@@ -27,7 +30,7 @@
           </div>
       </div>
       <div class="col-6">
-        <ul class="row list-unstyled">
+        <ul class="">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
