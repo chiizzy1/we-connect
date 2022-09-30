@@ -2,22 +2,56 @@
 
   <section class="login">
     <div class="container">
-      <div class="container">
-        <div class="content">
-          <div class="card">
-        <h2>Login</h2>
-        <form action="/login" method="POST">
-          <label for="Email">Email</label>
-            <input type="email" id="Email" name="email" placeholder="Email">
-          <label for="Password">Password</label>
-            <input type="password" id="Password" name="password" placeholder="Password">
-            <input type="submit" class="btn" class='space'>
-        </form>
-            </div>
+      <div class="hero min-h-screen bg-base-200 bg-inherit">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="text-center lg:text-left">
+            <h1 class="text-5xl font-bold text-orange-500">Login now!</h1>
+            <p class="py-6 max-w-md text-cyan-500">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+          </div>
+          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <form class="card-body" action="/login" method="POST">
+              <div class="form-control">
+                <label for="Email" class="label">
+                  <span class="label-text">Email</span>
+                </label>
+                <input type="email" id="Email" name="email" placeholder="Email" class="input input-bordered" />
+              </div>
+              <div class="form-control">
+                <label for="Password" class="label">
+                  <span class="label-text">Password</span>
+                </label>
+                <input type="password" id="Password" name="password" placeholder="Password" class="input input-bordered" />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button class="btn btn-primary">Login</button>
+              </div>
+            </form>
           </div>
         </div>
+      </div>
     </div>
   </section>
 
+  
+  <!-- style="background-image: url(https://placeimg.com/1000/800/arch);" -->
+  
+<!-- 
+  <div class="container">
+    <div class="content">
+      <div class="card">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+      <label for="Email">Email</label>
+        <input type="email" id="Email" name="email" placeholder="Email">
+      <label for="Password">Password</label>
+        <input type="password" id="Password" name="password" placeholder="Password">
+        <input type="submit" class="btn" class='space'>
+    </form>
+        </div>
+      </div> 
+    </div> -->
 
 <%- include('partials/footer') -%>
