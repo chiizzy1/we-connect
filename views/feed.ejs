@@ -1,8 +1,10 @@
 <%- include('partials/header') -%>
 
-  <div class="container">
-        <div class="grid grid-cols-3   gap-1">
-          <% for(var i=0; i<posts.length; i++) {%>
+  <section class="feed">
+    <div class="container">
+      <h2 class="py-8 text-sky-400 text-xl text-center font-semibold">Welcome, catch up with the latest posts.</h2>
+      <div class="grid grid-cols-3   gap-1">
+        <% for(var i=0; i<posts.length; i++) {%>
             <div class="card w-96 glass">
               <figure><img class="object-cover h-48 w-full"  src="<%= posts[i].image%>" alt="car!"/></figure>
               <div class="card-body">
@@ -13,9 +15,10 @@
                 </div>
               </div>
             </div>
-         <% } %>
+        <% } %>
         </div>
-  </div>  
+  </div>
+  </section>  
 
 
   <!-- <% for(var i=0; i<posts.length; i++) {%>

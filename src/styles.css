@@ -9,6 +9,11 @@
   }
 
 /* general styles */
+section{
+    min-height: 80vh;
+}
+
+
 .container {
     width: 85%;
     max-width: 1500px;
