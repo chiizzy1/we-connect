@@ -19,3 +19,18 @@ section{
     max-width: 1500px;
     margin: 0 auto;
 }
+
+.profile-grid{
+    display: grid;
+    grid-gap: 3em;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+}
+
+.index-content{
+    display: flex;
+}
+.box{
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+}
