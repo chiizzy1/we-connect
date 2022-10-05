@@ -75,6 +75,16 @@ exports.postSignup = (req, res, next) => {
       userName: req.body.userName,
       email: req.body.email,
       password: req.body.password,
+      profilePic : "/img/profileImg.png",
+      cloudinaryId : "",
+      country : "",
+      city: "", 
+      campus : "",
+      sex : "",
+      linkedin : "",
+      twitter : "",
+      mobile : 0000,
+      description : "",
     });
   
     User.findOne(

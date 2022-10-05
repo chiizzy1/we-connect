@@ -5,6 +5,50 @@ const UserSchema = new mongoose.Schema({
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
   password: String,
+  profilePic: {
+    type: String,  
+    require: false,
+  },
+  cloudinaryId: {
+    type: String,    
+    require: false,    
+  },
+  country: {
+    type: String,
+    required: false,
+  },
+  city: {
+    type: String,
+    required: false,
+  },
+  campus: {
+    type: String,
+    required: false,
+  }, 
+  sex: {
+    type: String,
+    required: false,
+  },
+  linkedin: {
+    type: String,
+    required: false,
+  },
+  twitter: {
+    type: String,
+    required: false,
+  },
+  mobile: {
+    type: Number,
+    required: false,
+  },
+  description: {
+    type: String,
+    required: false,
+  },
+  editedAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 // Password hash middleware.
