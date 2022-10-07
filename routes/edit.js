@@ -11,26 +11,29 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 //Edit Routes - simplified for now
 router.get("/:id", ensureAuth, editController.getUser);
 
+// Update User Details
+router.put("/editProfile/:id", editController.updateProfile);
+
 // change profile pic
- router.put("/editProfilePic/:id", editController.changePic);
+//  router.put("/editProfilePic/:id", editController.changePic);
 // change userName
- router.put("/editUserName/:id", editController.changeUserName); 
+//  router.put("/editUserName/:id", editController.changeUserName); 
 // change country
- router.put("/editCountry/:id", editController.changeCountry);
+//  router.put("/editCountry/:id", editController.changeCountry);
 // change city
- router.put("/editCity/:id", editController.changeCity);
+//  router.put("/editCity/:id", editController.changeCity);
 // change campus
- router.put("/editCampus/:id", editController.changeCampus);
+//  router.put("/editCampus/:id", editController.changeCampus);
 // change sex
- router.put("/editSex/:id", editController.changeSex);
+//  router.put("/editSex/:id", editController.changeSex);
 // change linkedin
- router.put("/editLinkedin/:id", editController.changeLinkedin);
+//  router.put("/editLinkedin/:id", editController.changeLinkedin);
 // change twitter
- router.put("/editTwitter/:id", editController.changeTwitter);
+//  router.put("/editTwitter/:id", editController.changeTwitter);
 // change mobile
- router.put("/editMobile/:id", editController.changeMobile);
+//  router.put("/editMobile/:id", editController.changeMobile);
 // change description
-router.put("/editDescription/:id", editController.changeDescription);
+// router.put("/editDescription/:id", editController.changeDescription);
 
 
 // delete User
