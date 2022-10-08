@@ -15,9 +15,27 @@ module.exports = {
             console.log(err);
         }
     },
+    changeImage: async (req, res) =>{
+          try {
+              const result = await cloudinary.uploader.upload(req.file.path);
+
+              await User.findOneAndUpdate(
+                { _id: req.params.id },
+                {
+                  $set: {
+                    "profilePic" : result.secure_url,
+                    "cloudinaryId": result.public_id,
+                  },
+                }
+              );
+              console.log("Profile image changed");
+              res.redirect(`/profile`);
+            } catch (err) {
+              console.log(err);
+            }
+      },
     updateProfile: async (req, res) =>{
           try {
-              // const user = await User.findById({ _id: req.params.id });
               await User.findOneAndUpdate(
                 { _id: req.params.id },
                 {
@@ -56,146 +74,3 @@ module.exports = {
         }
     },
 }
-
-
-
-    // changePic : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },
-    // changeUserName : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       } 
-    // },
-    // changeCountry : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },
-    // changeCity : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },
-    // changeCampus : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },
-    // changeSex : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },
-    // changeLinkedin : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },
-    // changeTwitter : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },
-    // changeMobile : async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },
-    // changeDescription: async (req, res) =>{
-    //     try {
-    //         await User.findOneAndUpdate(
-    //           { _id: req.params.id },
-    //           {
-    //             $inc: { likes: 1 },
-    //           }
-    //         );
-    //         console.log("Likes +1");
-    //         res.redirect(`/post/${req.params.id}`);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    // },

@@ -1,6 +1,21 @@
 <%- include('partials/header') -%>
 <section class="edit">
   <div class="container">
+    <h2>Edit Profile Picture</h2>
+
+    <form action="/edit/editProfileImage/<%= person %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <div class="card-body"><div class="form-control">
+          <label for="imgUpload" class="sr-only">Image</label>
+          <input type="file" class="input w-full max-w-xs" id="image" name="file">
+        </div>
+        <div class="form-control mt-6">
+          <button class="btn btn-primary">Edit</button>
+        </div>
+      </div>
+    </form>
+
+
+
     <h2>Edit Your Profile!</h2>
 
     <div class="hero min-h-screen bg-base-200">
@@ -17,56 +32,56 @@
               <label for="userName" class="label">
                 <span class="label-text">User Name</span>
               </label>
-              <input type="text" id="userName" value="<%= userName %>" name="userName" placeholder="UserName" class="input input-bordered" />
+              <input type="text" id="userName" value="<%= userName %>" name="userName" class="input input-bordered" />
             </div>
             
             <div class="form-control">
               <label for="country" class="label">
-                <span class="label-text">User Name</span>
+                <span class="label-text">Country</span>
               </label>
-              <input type="text" id="country" value="<%= country %>" name="country" placeholder="country" class="input input-bordered" />
+              <input type="text" id="country" value="<%= country %>" name="country" class="input input-bordered" />
             </div>
 
             <div class="form-control">
               <label for="city" class="label">
-                <span class="label-text">User Name</span>
+                <span class="label-text">City</span>
               </label>
-              <input type="text" id="city" value="<%= city %>" name="city" placeholder="city" class="input input-bordered" />
+              <input type="text" id="city" value="<%= city %>" name="city" class="input input-bordered" />
             </div>
 
             <div class="form-control">
               <label for="campus" class="label">
-                <span class="label-text">User Name</span>
+                <span class="label-text">Campus</span>
               </label>
-              <input type="text" id="campus" value="<%= campus %>" name="campus" placeholder="campus" class="input input-bordered" />
+              <input type="text" id="campus" value="<%= campus %>" name="campus" class="input input-bordered" />
             </div>
 
             <div class="form-control">
               <label for="sex" class="label">
-                <span class="label-text">User Name</span>
+                <span class="label-text">Sex</span>
               </label>
-              <input type="text" id="sex" value="<%= sex %>" name="sex" placeholder="sex" class="input input-bordered" />
+              <input type="text" id="sex" value="<%= sex %>" name="sex" class="input input-bordered" />
             </div>
 
             <div class="form-control">
               <label for="twitter" class="label">
-                <span class="label-text">User Name</span>
+                <span class="label-text">Twitter</span>
               </label>
-              <input type="text" value="<%= twitter %>" id="twitter" name="twitter" placeholder="twitter" class="input input-bordered" />
+              <input type="text" value="<%= twitter %>" id="twitter" name="twitter" class="input input-bordered" />
             </div>
 
             <div class="form-control">
               <label for="linkedIn" class="label">
-                <span class="label-text">User Name</span>
+                <span class="label-text">LinkedIn</span>
               </label>
-              <input type="text" value="<%= linkedIn %>" id="linkedIn" name="linkedIn" placeholder="LinkedIn" class="input input-bordered" />
+              <input type="text" value="<%= linkedIn %>" id="linkedIn" name="linkedIn" class="input input-bordered" />
             </div>
 
             <div class="form-control">
               <label for="mobile" class="label">
-                <span class="label-text">User Name</span>
+                <span class="label-text">Mobile</span>
               </label>
-              <input type="text" value="<%= mobile %>" id="mobile" name="mobile" placeholder="Mobile" class="input input-bordered" />
+              <input type="text" value="<%= mobile %>" id="mobile" name="mobile" class="input input-bordered" />
             </div>
 
             <!-- <div class="form-control">
@@ -84,7 +99,7 @@
             </div>
 
             <div class="form-control mt-6">
-              <button class="btn btn-primary">Save Edit</button>
+              <button class="btn btn-primary">Save Changes</button>
             </div>
 
           </form>

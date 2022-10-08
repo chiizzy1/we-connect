@@ -15,26 +15,7 @@ router.get("/:id", ensureAuth, editController.getUser);
 router.put("/editProfile/:id", editController.updateProfile);
 
 // change profile pic
-//  router.put("/editProfilePic/:id", editController.changePic);
-// change userName
-//  router.put("/editUserName/:id", editController.changeUserName); 
-// change country
-//  router.put("/editCountry/:id", editController.changeCountry);
-// change city
-//  router.put("/editCity/:id", editController.changeCity);
-// change campus
-//  router.put("/editCampus/:id", editController.changeCampus);
-// change sex
-//  router.put("/editSex/:id", editController.changeSex);
-// change linkedin
-//  router.put("/editLinkedin/:id", editController.changeLinkedin);
-// change twitter
-//  router.put("/editTwitter/:id", editController.changeTwitter);
-// change mobile
-//  router.put("/editMobile/:id", editController.changeMobile);
-// change description
-// router.put("/editDescription/:id", editController.changeDescription);
-
+router.put("/editProfileImage/:id", upload.single("file"), editController.changeImage);
 
 // delete User
 router.delete("/deleteUser/:id", editController.deleteUser);
